@@ -1,0 +1,42 @@
+use sec;
+
+drop table if exists sub;
+
+create table sub (
+  adsh varchar(20) not null unique,
+  cik int(10) not null,
+  name varchar(150) not null,
+  sic int(4),
+  countryba varchar(2) not null,
+  stprba varchar(2),
+  cityba varchar(30) not null,
+  zipba varchar(10),
+  bas1 varchar(40),
+  bas2 varchar(40),
+  baph varchar(12),
+  countryma varchar(2),
+  stprma varchar(2),
+  cityma varchar(30),
+  zipma varchar(10),
+  mas1 varchar(40),
+  mas2 varchar(40),
+  countryinc varchar(3) not null,
+  stprinc varchar(2),
+  ein int(10),
+  former varchar(150),
+  changed varchar(8),
+  afs varchar(5),
+  wksi bool not null,
+  fye varchar(4) not null,
+  form varchar(10) not null,
+  period date not null,
+  fy year(4) not null,
+  fp varchar(2) not null,
+  filed date not null,
+  accepted datetime not null,
+  prevrpt bool not null,
+  detail bool not null,
+  instance varchar(32) not null,
+  nciks int(4) not null,
+  aciks varchar(120)
+);
