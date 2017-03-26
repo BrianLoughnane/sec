@@ -3,10 +3,10 @@ use sec;
 drop table if exists sub;
 
 create table sub (
-  adsh varchar(20) not null unique,
-  cik int(10) not null,
+  adsh varchar(20) not null unique primary key,
+  cik integer not null,
   name varchar(150) not null,
-  sic int(4),
+  sic integer,
   countryba varchar(2) not null,
   stprba varchar(2),
   cityba varchar(30) not null,
@@ -22,7 +22,7 @@ create table sub (
   mas2 varchar(40),
   countryinc varchar(3) not null,
   stprinc varchar(2),
-  ein int(10),
+  ein integer,
   former varchar(150),
   changed varchar(8),
   afs varchar(5),
@@ -37,6 +37,6 @@ create table sub (
   prevrpt bool not null,
   detail bool not null,
   instance varchar(32) not null,
-  nciks int(4) not null,
+  nciks integer not null,
   aciks varchar(120)
 );
